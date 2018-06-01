@@ -18,18 +18,22 @@ public class Criatura {
     private String region;
     private long poblacion;
     private ArrayList objetos = new ArrayList();
-    private double peso;
+    private int peso;
 
     public Criatura() {
     }
 
-    public Criatura(String raza, int energia, int edadmax, String region, long poblacion, double peso) {
+    public Criatura(String raza, int energia, int edadmax, String region, long poblacion, int peso) {
         this.raza = raza;
         this.energia = energia;
         this.edadmax = edadmax;
         this.region = region;
         this.poblacion = poblacion;
         this.peso = peso;
+    }
+
+    public int getPeso() {
+        return peso;
     }
 
     public String getRaza() {
