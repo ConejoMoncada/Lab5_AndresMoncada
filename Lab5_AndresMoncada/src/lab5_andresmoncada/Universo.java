@@ -44,11 +44,24 @@ public class Universo extends javax.swing.JFrame {
         jd_madd = new javax.swing.JDialog();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        agregarmundo = new javax.swing.JButton();
         tf_mnom = new javax.swing.JTextField();
         tf_mpeso = new javax.swing.JTextField();
         jd_mmod = new javax.swing.JDialog();
         jd_cadd = new javax.swing.JDialog();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        tf_cnom = new javax.swing.JTextField();
+        tf_cene = new javax.swing.JTextField();
+        tf_cedad = new javax.swing.JTextField();
+        tf_creg = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        tf_cpob = new javax.swing.JTextField();
+        tf_cpeso = new javax.swing.JTextField();
+        agregarcriatura = new javax.swing.JButton();
         jd_cmod = new javax.swing.JDialog();
         jScrollPane1 = new javax.swing.JScrollPane();
         jl_mundos = new javax.swing.JList<>();
@@ -59,6 +72,7 @@ public class Universo extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
 
         jmi_madd.setText("Agregar mundo");
         jmi_madd.addActionListener(new java.awt.event.ActionListener() {
@@ -107,10 +121,10 @@ public class Universo extends javax.swing.JFrame {
 
         jLabel5.setText("Peso");
 
-        jButton1.setText("Agregar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        agregarmundo.setText("Agregar");
+        agregarmundo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                agregarmundoActionPerformed(evt);
             }
         });
 
@@ -131,7 +145,7 @@ public class Universo extends javax.swing.JFrame {
                             .addComponent(tf_mnom)))
                     .addGroup(jd_maddLayout.createSequentialGroup()
                         .addGap(148, 148, 148)
-                        .addComponent(jButton1)))
+                        .addComponent(agregarmundo)))
                 .addContainerGap(94, Short.MAX_VALUE))
         );
         jd_maddLayout.setVerticalGroup(
@@ -146,7 +160,7 @@ public class Universo extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(tf_mpeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(agregarmundo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -161,15 +175,83 @@ public class Universo extends javax.swing.JFrame {
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
+        jLabel6.setText("Nombre de la raza");
+
+        jLabel7.setText("Numero de energía");
+
+        jLabel8.setText("Edad máxima");
+
+        jLabel9.setText("Nombre de la región");
+
+        jLabel10.setText("Población");
+
+        jLabel11.setText("Peso");
+
+        agregarcriatura.setText("Agregar");
+        agregarcriatura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregarcriaturaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jd_caddLayout = new javax.swing.GroupLayout(jd_cadd.getContentPane());
         jd_cadd.getContentPane().setLayout(jd_caddLayout);
         jd_caddLayout.setHorizontalGroup(
             jd_caddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(jd_caddLayout.createSequentialGroup()
+                .addGroup(jd_caddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_caddLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jd_caddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel11))
+                        .addGap(18, 18, 18)
+                        .addGroup(jd_caddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_cnom)
+                            .addComponent(tf_cene)
+                            .addComponent(tf_cedad)
+                            .addComponent(tf_creg)
+                            .addComponent(tf_cpob)
+                            .addComponent(tf_cpeso, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)))
+                    .addGroup(jd_caddLayout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(agregarcriatura)))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
         jd_caddLayout.setVerticalGroup(
             jd_caddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(jd_caddLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_caddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(tf_cnom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_caddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(tf_cene, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_caddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(tf_cedad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_caddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(tf_creg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_caddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(tf_cpob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_caddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(tf_cpeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(agregarcriatura)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jd_cmodLayout = new javax.swing.GroupLayout(jd_cmod.getContentPane());
@@ -213,6 +295,8 @@ public class Universo extends javax.swing.JFrame {
 
         jLabel3.setText("Presione clic derecho en una lista para ver sus opciones");
 
+        jLabel12.setText("Al escoger un mundo se mostrarán sus criaturas en la lista");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -220,18 +304,19 @@ public class Universo extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(64, 64, 64)
                         .addComponent(jLabel1)
                         .addGap(114, 114, 114)
                         .addComponent(jLabel2))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(jLabel3)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel3))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -242,6 +327,9 @@ public class Universo extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
                             .addComponent(jLabel2))
@@ -249,17 +337,25 @@ public class Universo extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel3)
-                        .addGap(4, 4, 4))
-                    .addComponent(jScrollPane2))
-                .addContainerGap())
+                        .addGap(7, 7, 7))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jl_mundosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_mundosMouseClicked
+        if(jl_mundos.getSelectedIndex()>=0){
+            DefaultListModel modelom = (DefaultListModel)jl_mundos.getModel();
+            DefaultListModel modeloc = (DefaultListModel)jl_criaturas.getModel();
+            for (int i = 0; i < ((Mundo)modelom.getElementAt(jl_mundos.getSelectedIndex())).getCriaturas().size(); i++) {
+                modeloc.addElement(((Mundo)modelom.getElementAt(jl_mundos.getSelectedIndex())).getCriaturas().get(i));
+            }
+            jl_criaturas.setModel(modeloc);
+        }
         if (evt.isMetaDown()){
             jpm_mundos.show(jl_mundos, evt.getX(), evt.getY());
         }
@@ -318,7 +414,7 @@ public class Universo extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "No hay un mundo seleccionado");
     }//GEN-LAST:event_jmi_mdelActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void agregarmundoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarmundoActionPerformed
         String nombre = tf_mnom.getText();
         try {
             long peso = Long.parseLong(tf_mpeso.getText());
@@ -331,7 +427,35 @@ public class Universo extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Se produjo un error agregando a la lista");
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_agregarmundoActionPerformed
+
+    private void agregarcriaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarcriaturaActionPerformed
+        if(jl_mundos.getSelectedIndex()>= 0){
+            try {
+                String raza = tf_cnom.getText();
+                int energia = Integer.parseInt(tf_cene.getText());
+                int edad = Integer.parseInt(tf_cedad.getText());
+                String region = tf_creg.getText();
+                long poblacion = Long.parseLong(tf_cpob.getText());
+                double peso = Double.parseDouble(tf_cpeso.getText());
+                DefaultListModel modelom = (DefaultListModel) jl_mundos.getModel();
+                DefaultListModel modeloc = (DefaultListModel) jl_criaturas.getModel();
+                ((Mundo)modelom.getElementAt(jl_mundos.getSelectedIndex())).getCriaturas().add(new Criatura(raza, energia, edad, region, poblacion, peso));
+                modeloc.addElement(((Mundo)modelom.getElementAt(jl_mundos.getSelectedIndex())).getCriaturas().get(((Mundo)modelom.getElementAt(jl_mundos.getSelectedIndex())).getCriaturas().size()-1));
+                jl_criaturas.setModel(modeloc);
+                tf_cnom.setText("");
+                tf_cedad.setText("");
+                tf_cene.setText("");
+                tf_cpeso.setText("");
+                tf_cpob.setText("");
+                tf_creg.setText("");
+                jd_cadd.setVisible(false);
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(this, "Se produjo un error agregando a la lista");
+            }
+        }else
+            JOptionPane.showMessageDialog(this, "Seleccione un mundo primero");
+    }//GEN-LAST:event_agregarcriaturaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -369,12 +493,20 @@ public class Universo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton agregarcriatura;
+    private javax.swing.JButton agregarmundo;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -393,6 +525,12 @@ public class Universo extends javax.swing.JFrame {
     private javax.swing.JPopupMenu jpm_criaturas;
     private javax.swing.JPopupMenu jpm_mundos;
     private javax.swing.JTree jt_uni;
+    private javax.swing.JTextField tf_cedad;
+    private javax.swing.JTextField tf_cene;
+    private javax.swing.JTextField tf_cnom;
+    private javax.swing.JTextField tf_cpeso;
+    private javax.swing.JTextField tf_cpob;
+    private javax.swing.JTextField tf_creg;
     private javax.swing.JTextField tf_mnom;
     private javax.swing.JTextField tf_mpeso;
     // End of variables declaration//GEN-END:variables
