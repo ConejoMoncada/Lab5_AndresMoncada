@@ -7,6 +7,9 @@ package lab5_andresmoncada;
 
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 
 /**
  *
@@ -30,52 +33,305 @@ public class Universo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jpm_mundos = new javax.swing.JPopupMenu();
+        jmi_madd = new javax.swing.JMenuItem();
+        jmi_mmod = new javax.swing.JMenuItem();
+        jmi_mdel = new javax.swing.JMenuItem();
+        jpm_criaturas = new javax.swing.JPopupMenu();
+        jmi_cadd = new javax.swing.JMenuItem();
+        jmi_cmod = new javax.swing.JMenuItem();
+        jmi_cdel = new javax.swing.JMenuItem();
+        jd_madd = new javax.swing.JDialog();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        tf_mnom = new javax.swing.JTextField();
+        tf_mpeso = new javax.swing.JTextField();
+        jd_mmod = new javax.swing.JDialog();
+        jd_cadd = new javax.swing.JDialog();
+        jd_cmod = new javax.swing.JDialog();
         jScrollPane1 = new javax.swing.JScrollPane();
         jl_mundos = new javax.swing.JList<>();
         jScrollPane2 = new javax.swing.JScrollPane();
         jt_uni = new javax.swing.JTree();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jl_Criaturas = new javax.swing.JList<>();
+        jl_criaturas = new javax.swing.JList<>();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+
+        jmi_madd.setText("Agregar mundo");
+        jmi_madd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_maddActionPerformed(evt);
+            }
+        });
+        jpm_mundos.add(jmi_madd);
+
+        jmi_mmod.setText("Modificar mundo");
+        jmi_mmod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_mmodActionPerformed(evt);
+            }
+        });
+        jpm_mundos.add(jmi_mmod);
+
+        jmi_mdel.setText("Eliminar mundo");
+        jmi_mdel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_mdelActionPerformed(evt);
+            }
+        });
+        jpm_mundos.add(jmi_mdel);
+
+        jmi_cadd.setText("Agregar criatura");
+        jmi_cadd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_caddActionPerformed(evt);
+            }
+        });
+        jpm_criaturas.add(jmi_cadd);
+
+        jmi_cmod.setText("Modificar criatura");
+        jmi_cmod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_cmodActionPerformed(evt);
+            }
+        });
+        jpm_criaturas.add(jmi_cmod);
+
+        jmi_cdel.setText("Eliminar criatura");
+        jpm_criaturas.add(jmi_cdel);
+
+        jLabel4.setText("Nombre de la tortuga");
+
+        jLabel5.setText("Peso");
+
+        jButton1.setText("Agregar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_maddLayout = new javax.swing.GroupLayout(jd_madd.getContentPane());
+        jd_madd.getContentPane().setLayout(jd_maddLayout);
+        jd_maddLayout.setHorizontalGroup(
+            jd_maddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_maddLayout.createSequentialGroup()
+                .addGroup(jd_maddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_maddLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jd_maddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jd_maddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_mpeso, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+                            .addComponent(tf_mnom)))
+                    .addGroup(jd_maddLayout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(jButton1)))
+                .addContainerGap(94, Short.MAX_VALUE))
+        );
+        jd_maddLayout.setVerticalGroup(
+            jd_maddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_maddLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_maddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(tf_mnom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_maddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(tf_mpeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jd_mmodLayout = new javax.swing.GroupLayout(jd_mmod.getContentPane());
+        jd_mmod.getContentPane().setLayout(jd_mmodLayout);
+        jd_mmodLayout.setHorizontalGroup(
+            jd_mmodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_mmodLayout.setVerticalGroup(
+            jd_mmodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jd_caddLayout = new javax.swing.GroupLayout(jd_cadd.getContentPane());
+        jd_cadd.getContentPane().setLayout(jd_caddLayout);
+        jd_caddLayout.setHorizontalGroup(
+            jd_caddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_caddLayout.setVerticalGroup(
+            jd_caddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jd_cmodLayout = new javax.swing.GroupLayout(jd_cmod.getContentPane());
+        jd_cmod.getContentPane().setLayout(jd_cmodLayout);
+        jd_cmodLayout.setHorizontalGroup(
+            jd_cmodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_cmodLayout.setVerticalGroup(
+            jd_cmodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jl_mundos.setModel(new DefaultListModel());
+        jl_mundos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jl_mundosMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jl_mundos);
 
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Universo");
         jt_uni.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane2.setViewportView(jt_uni);
 
-        jl_Criaturas.setModel(new DefaultListModel());
-        jScrollPane3.setViewportView(jl_Criaturas);
+        jl_criaturas.setModel(new DefaultListModel());
+        jl_criaturas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jl_criaturasMouseClicked(evt);
+            }
+        });
+        jScrollPane3.setViewportView(jl_criaturas);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setText("Mundos");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setText("Criaturas");
+
+        jLabel3.setText("Presione clic derecho en una lista para ver sus opciones");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 230, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addComponent(jLabel1)
+                        .addGap(114, 114, 114)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(jLabel3)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(166, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
-                        .addComponent(jScrollPane3)))
-                .addGap(20, 20, 20))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3)
+                        .addGap(4, 4, 4))
+                    .addComponent(jScrollPane2))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jl_mundosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_mundosMouseClicked
+        if (evt.isMetaDown()){
+            jpm_mundos.show(jl_mundos, evt.getX(), evt.getY());
+        }
+    }//GEN-LAST:event_jl_mundosMouseClicked
+
+    private void jl_criaturasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_criaturasMouseClicked
+        if (evt.isMetaDown()){
+            jpm_criaturas.show(jl_criaturas, evt.getX(), evt.getY());
+        }
+    }//GEN-LAST:event_jl_criaturasMouseClicked
+
+    private void jmi_maddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_maddActionPerformed
+        jd_madd.setModal(true);
+        jd_madd.pack();
+        jd_madd.setLocationRelativeTo(this);
+        jd_madd.setVisible(true);
+    }//GEN-LAST:event_jmi_maddActionPerformed
+
+    private void jmi_caddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_caddActionPerformed
+        jd_cadd.setModal(true);
+        jd_cadd.pack();
+        jd_cadd.setLocationRelativeTo(this);
+        jd_cadd.setVisible(true);
+    }//GEN-LAST:event_jmi_caddActionPerformed
+
+    private void jmi_mmodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_mmodActionPerformed
+        if(jl_mundos.getSelectedIndex() >= 0){
+            jd_mmod.setModal(true);
+            jd_mmod.pack();
+            jd_mmod.setLocationRelativeTo(this);
+            jd_mmod.setVisible(true);
+        }else
+            JOptionPane.showMessageDialog(this, "No hay un mundo seleccionado");
+    }//GEN-LAST:event_jmi_mmodActionPerformed
+
+    private void jmi_cmodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_cmodActionPerformed
+        if(jl_mundos.getSelectedIndex() >= 0){
+            jd_cmod.setModal(true);
+            jd_cmod.pack();
+            jd_cmod.setLocationRelativeTo(this);
+            jd_cmod.setVisible(true);
+        }else
+            JOptionPane.showMessageDialog(this, "No hay una criatura seleccionada");
+    }//GEN-LAST:event_jmi_cmodActionPerformed
+
+    private void jmi_mdelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_mdelActionPerformed
+        if(jl_mundos.getSelectedIndex() >= 0){
+            DefaultListModel modelo = (DefaultListModel)jl_mundos.getModel();
+            int resp = JOptionPane.showConfirmDialog(this, "Esta seguro que desea eliminar " + modelo.getElementAt(jl_mundos.getSelectedIndex()).toString()+"?","Confirm",
+                JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
+        if(resp == JOptionPane.OK_OPTION){
+            
+            modelo.remove(jl_mundos.getSelectedIndex());
+        }
+        }else
+            JOptionPane.showMessageDialog(this, "No hay un mundo seleccionado");
+    }//GEN-LAST:event_jmi_mdelActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String nombre = tf_mnom.getText();
+        try {
+            long peso = Long.parseLong(tf_mpeso.getText());
+            DefaultListModel modelo = (DefaultListModel) jl_mundos.getModel();
+            modelo.addElement(new Mundo(nombre,peso));
+            jl_mundos.setModel(modelo);
+            tf_mnom.setText("");
+            tf_mpeso.setText("");
+            jd_madd.setVisible(false);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Se produjo un error agregando a la lista");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -113,12 +369,32 @@ public class Universo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JList<String> jl_Criaturas;
+    private javax.swing.JDialog jd_cadd;
+    private javax.swing.JDialog jd_cmod;
+    private javax.swing.JDialog jd_madd;
+    private javax.swing.JDialog jd_mmod;
+    private javax.swing.JList<String> jl_criaturas;
     private javax.swing.JList<String> jl_mundos;
+    private javax.swing.JMenuItem jmi_cadd;
+    private javax.swing.JMenuItem jmi_cdel;
+    private javax.swing.JMenuItem jmi_cmod;
+    private javax.swing.JMenuItem jmi_madd;
+    private javax.swing.JMenuItem jmi_mdel;
+    private javax.swing.JMenuItem jmi_mmod;
+    private javax.swing.JPopupMenu jpm_criaturas;
+    private javax.swing.JPopupMenu jpm_mundos;
     private javax.swing.JTree jt_uni;
+    private javax.swing.JTextField tf_mnom;
+    private javax.swing.JTextField tf_mpeso;
     // End of variables declaration//GEN-END:variables
     private String codigo;
     private double edad;
