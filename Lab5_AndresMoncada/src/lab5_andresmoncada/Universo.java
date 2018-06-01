@@ -859,7 +859,7 @@ public class Universo extends javax.swing.JFrame {
     private javax.swing.JTextField tf_mpeso;
     // End of variables declaration//GEN-END:variables
     private String codigo = "universo12";
-    private double edad;
+    private long edad = 14000000;
     private long peso = 0;
     private DefaultMutableTreeNode nodo;
     private Criatura criatura;
